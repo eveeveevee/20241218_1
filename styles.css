@@ -1,0 +1,207 @@
+/* 基礎設定 */
+body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background: linear-gradient(135deg, #FFE5E5 0%, #E5F3FF 100%);
+    color: #6B5876;
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(107, 88, 118, 0.15);
+}
+
+/* 文字對齊 */
+.text-center {
+    text-align: center;
+}
+
+/* 歡迎橫幅 */
+.welcome-banner h1 {
+    color: #8B7B8B;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 訊息框 */
+.message-box {
+    background-color: #FFF5F5;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(139, 123, 139, 0.1);
+    border: 3px solid #FFE0E0;
+}
+
+.message-title {
+    font-size: 1.3em;
+    color: #8B7B8B;
+    margin-bottom: 20px;
+}
+
+/* 說明列表 */
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instruction-list li {
+    margin: 15px 0;
+    padding: 12px 20px;
+    background-color: #FFF;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.instruction-list li:hover {
+    transform: translateX(10px);
+    background-color: #FFE5E5;
+}
+
+/* 按鈕樣式 */
+.btn {
+    background-color: #B4A3B4;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 123, 139, 0.2);
+}
+
+.start-btn {
+    background-color: #6D9BDF;
+    font-size: 1.2em;
+    padding: 15px 30px;
+}
+
+.submit-btn {
+    background-color: #DF6D9B;
+    display: block;
+    margin: 30px auto;
+}
+
+/* 測驗介面 */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-header h2 {
+    color: #8B7B8B;
+    margin-bottom: 10px;
+}
+
+.quiz-instruction {
+    color: #B4A3B4;
+    font-size: 1.1em;
+}
+
+/* 題目樣式 */
+.question {
+    background-color: #FFF;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(139, 123, 139, 0.1);
+    border: 3px solid #FFE0E0;
+    position: relative;
+}
+
+.question p[data-number]:before {
+    content: attr(data-number) "." ;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 選項樣式 */
+.options label {
+    display: block;
+    margin: 12px 0;
+    padding: 12px 20px;
+    background-color: #FFF5F5;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.options label:hover {
+    background-color: #FFE5E5;
+    transform: translateX(10px);
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* 結果頁面 */
+.result-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.result-content {
+    text-align: center;
+    padding: 30px;
+    background-color: #FFF;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(139, 123, 139, 0.2);
+    max-width: 80%;
+}
+
+.result-emoji {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.score-display {
+    font-size: 2em;
+    color: #8B7B8B;
+    margin: 20px 0;
+}
+
+.encouragement {
+    color: #B4A3B4;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+} 
